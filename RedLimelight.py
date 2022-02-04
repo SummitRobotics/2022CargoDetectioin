@@ -57,8 +57,8 @@ def runPipeline(image, llrobot):
             yNeg = False
             xNeg = False
             ((x, y), radius) = cv2.minEnclosingCircle(c)
-            xCoord = (x-160)*.3725
-            yCoord = (y-120)*.3808
+            xCoord = (x-160)*.0.18625
+            yCoord = (y-120)*.207
             xCoord = round(xCoord, 1)
             yCoord = round(yCoord, 1)
             mask1 = np.zeros_like(frame_threshold)
