@@ -26,7 +26,7 @@ def gc(cnts):
 # To change a global variable inside a function,
 # re-declare it the global keyword
 
-blue = False
+blue = True
 # runPipeline() is called every frame by Limelight's backend.
 def runPipeline(image, llrobot):
     ballNum = 0
@@ -37,7 +37,7 @@ def runPipeline(image, llrobot):
     frame_HSV = cv2.cvtColor(image, cv2.COLOR_BGR2HSV) 
 
         #Create Color Threshold Mask for Analysis (Range of Color in Image to Analyze)
-    frame_threshold = cv2.inRange(frame_HSV, (0, 150, 0), (10, 255, 255))
+    frame_threshold = cv2.inRange(frame_HSV, (100, 200, 0), (110, 255, 200))
             
         #Erode Color Threshold Mask to remove noise
     frame_threshold_eroded = cv2.erode(frame_threshold, None, iterations=3)
